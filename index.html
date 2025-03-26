@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badarinath Sai Balaji | Portfolio</title>
+    <link rel="icon" type="image/png" href="images/TAB LOGO.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar with hamburger menu -->
+    <nav class="navbar">
+        <h1 class="logo">Portfolio.</h1>
+        <ul>
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#certifications" class="nav-link">Certifications</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger" aria-label="Toggle navigation" role="button">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.navbar ul');
+        const navItems = document.querySelectorAll('.nav-link');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active'); 
+            hamburger.classList.toggle('open'); 
+        });
+        navItems.forEach(link => {
+            link.addEventListener('click', function () {
+                navItems.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('open');
+            });
+        });
+        window.addEventListener('scroll', () => {
+            let scrollPosition = window.scrollY; 
+            navItems.forEach(link => {
+                const section = document.querySelector(link.getAttribute('href'));
+                if (section.offsetTop <= scrollPosition + 100 && 
+                    section.offsetTop + section.offsetHeight > scrollPosition + 100) {
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+    <!-- Home Section -->
+    <div id="home" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="header-text">
+                <h1>Hi! I'm <span>Badarinath Sai Balaji</span><br>From <span>Hyderabad</span></h1>
+                <h2>Aspiring Software Engineer</h2>
+                <div class="btn-sci">
+                    <a href="https://drive.google.com/uc?export=download&id=181-PwyjlAto6MzIQdMXWxhIr9YLTw1Bt" class="btn" aria-label="Download CV" target="_blank">Download CV</a>
+                    <div class="sci">
+                        <a href="https://github.com/Badarinath15122001" target="_blank" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="tel:7095231234" aria-label="Call">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/badarinathsaibalaji/" target="_blank" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=badarinath15122001@gmail.com" target="_blank" aria-label="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Section -->
+    <div id="about" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <h1 class="heading">About Me</h1>
+            <div class="about-row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg" alt="Profile picture of Badarinath Sai Balaji">
+                </div>
+                <div class="about-col-2">
+                    <p class="about-content">
+                        I’m <strong>Badarinath Sai Balaji</strong>, a Computer Science graduate passionate about software development, data analytics, and emerging technologies. With a strong foundation in Python, Java, SQL, and web development, I enjoy solving complex problems and building efficient solutions.
+                        <br><br>
+                        My recent project involved <strong>Stack Overflow label prediction using machine learning</strong>, where I worked with large datasets and enhanced model accuracy through data analysis and NLP techniques. This experience strengthened my problem-solving skills and ability to handle real-world data challenges.
+                        <br><br>
+                        Beyond technical skills, I believe in continuous learning, teamwork, and adaptability. I have participated in seminars on emerging technologies, organized cultural events, and engaged in industry workshops to stay updated with the latest trends.
+                        <br><br>
+                        I am actively seeking opportunities in software development and data-driven applications, where I can apply my skills to develop scalable and impactful solutions. Let’s connect to discuss innovative ideas, technology trends, and exciting projects in the ever-evolving world of tech!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Education Section -->
+    <div id="education" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <h1 class="heading">Education</h1>
+            <div class="education-list">
+                <div>
+                    <h2>Secondary School Certificate[10th]</h2>
+                        <ul>
+                            <li><span>School</span><br>Vignan Bo-tree School, Hyderabad</li>
+                            <li><span>Board</span><br>Central Board of Secondary Education[CBSE]</li>
+                            <li><span>Passing Year</span><br>2017</li>
+                            <li><span>CGPA</span><br>8.6</li>
+                        </ul>
+                </div>
+                <div>
+                    <h2>Higher Secondary Certificate[12th]</h2>
+                        <ul>
+                            <li><span>College</span><br>Sri Chaitanya Junior College, Hyderabad</li>
+                            <li><span>Stream</span><br>Mathematics, Physics and Chemistry[MPC]</li>
+                            <li><span>Board</span><br>Telangana State Board of Intermediate Education[TSBIE]</li>
+                            <li><span>Passing Year</span><br>2019</li>
+                            <li><span>Percentage</span><br>76.7%</li>
+                        </ul>
+                </div>
+                <div>
+                    <h2>Bachelor Degree<br>[B.Tech]</h2>
+                        <ul>
+                            <li><span>College</span><br>Institute of Aeronautical Engineering, Hyderabad</li>
+                            <li><span>Branch</span><br>Computer Science and Engineering</li>
+                            <li><span>University</span><br>Jawaharlal Nehru Technological University, Hyderabad</li>
+                            <li><span>Passing Year</span><br>2023</li>
+                            <li><span>CGPA</span><br>7.63</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Skills Section -->
+    <div id="skills" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <h1 class="heading">My Skills</h1>
+            <div class="skill-list">
+                <div class="skillbox">
+                    <div class="skilltitle">
+                        <div class="img">
+                            <img src="images/python.png" class="skillicon">
+                        </div>
+                    </div>
+                    <h3 class="skills-heading">Python</h3>
+                </div>
+                <div class="skillbox">
+                    <div class="skilltitle">
+                        <div class="img">
+                            <img src="images/C.png" class="skillicon">
+                        </div>
+                    </div>
+                    <h3 class="skills-heading">C Programming</h3>
+                </div>
+                <div class="skillbox">
+                    <div class="skilltitle">
+                        <div class="img">
+                            <img src="images/java.png" class="skillicon">
+                        </div>
+                    </div>
+                    <h3 class="skills-heading">Java</h3>
+                </div>
+                <div class="skillbox">
+                    <div class="skilltitle">
+                        <div class="img">
+                            <img src="images/oops.jpg" class="skillicon">
+                        </div>
+                    </div>
+                    <h3 class="skills-heading">OOPS</h3>
+                </div>
+                <div class="skillbox">
+                    <div class="skilltitle">
+                        <div class="img">
+                            <img src="images/sql.png" class="skillicon">
+                        </div>
+                    </div>
+                    <h3 class="skills-heading">SQL</h3>
+                </div>
+                <div class="skillbox">
+                    <div class="skilltitle">
+                        <div class="img">
+                            <img src="images/html.png" class="skillicon">
+                        </div>
+                    </div>
+                    <h3 class="skills-heading">HTML</h3>
+                </div>
+                <div class="skillbox">
+                    <div class="skilltitle">
+                        <div class="img">
+                            <img src="images/css.png" class="skillicon">
+                        </div>
+                    </div>
+                    <h3 class="skills-heading">CSS</h3>
+                </div>
+                <div class="skillbox">
+                    <div class="skilltitle">
+                        <div class="img">
+                            <img src="images/agile methodology.jpg" class="skillicon">
+                        </div>
+                    </div>
+                    <h3 class="skills-heading">Agile Methodology</h3>
+                </div>
+                <div class="skillbox">
+                    <div class="skilltitle">
+                        <div class="img">
+                            <img src="images/excel.jpg" class="skillicon">
+                        </div>
+                    </div>
+                    <h3 class="skills-heading">Microsoft Excel</h3>
+                </div>
+                <div class="skillbox">
+                    <div class="skilltitle">
+                        <div class="img">
+                            <img src="images/power bi.png" class="skillicon">
+                        </div>
+                    </div>
+                    <h3 class="skills-heading">Microsoft Power BI</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Certifications Section -->
+    <div id="certifications" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <h1 class="heading">Certifications</h1>
+            <div class="certifications-grid">
+                <div class="certification-item">
+                    <div class="certification-image">
+                        <img src="images/accenture.png">
+                    </div>
+                    <div class="certification-content">
+                        <h3>Data Analytics and Visualization</h3>
+                        <p>Issued by Accenture(Forage) - August 2024</p>
+                        <a class="viewcertificate" href="https://drive.google.com/file/d/1r_jrtMhN_mQlBLU8K34QuGfHjrWDxJeM/view?usp=drive_link" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <div class="certification-image">
+                        <img src="images/pwc.png">
+                    </div>
+                    <div class="certification-content">
+                        <h3>Power BI Job Simulation</h3>
+                        <p>Issued by PWC(Forage) - September 2024</p>
+                        <a class="viewcertificate" href="https://drive.google.com/file/d/1jXyrE0Oy9PuVDtFIcREoLfqE5R2hnuoW/view?usp=drive_link" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <div class="certification-image">
+                        <img src="images/simplilearn.jpg">
+                    </div>
+                    <div class="certification-content">
+                        <h3>Python for Beginners</h3>
+                        <p>Issued by Simplilearn - June 2022</p>
+                        <a class="viewcertificate" href="https://drive.google.com/file/d/1lrXvcDAxUFbVIcXUEo_Vv413ivCnrS3o/view?usp=drive_link" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <div class="certification-image">
+                        <img src="images/simplilearn.jpg">
+                    </div>
+                    <div class="certification-content">
+                        <h3>Introduction to the Fundamentals of Databases</h3>
+                        <p>Issued by Accenture(Forage) - June 2022</p>
+                        <a class="viewcertificate" href="https://drive.google.com/file/d/1b5sgk8p4OXatJAFeYoBQbbgtZXEbwQIo/view?usp=drive_link" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <div class="certification-image">
+                        <img src="images/minnalearn.png">
+                    </div>
+                    <div class="certification-content">
+                        <h3>Elements of AI</h3>
+                        <p>Issued by University of Helsinki(Minnalearn) - September 2023</p>
+                        <a class="viewcertificate" href="https://drive.google.com/file/d/1wzbhJiMmfEpTuxlBCaqfJs53LOGcPaqt/view?usp=drive_link" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <div class="certification-image">
+                        <img src="images/Cognizant.png">
+                    </div>
+                    <div class="certification-content">
+                        <h3>Agile Methodology Job Simulation</h3>
+                        <p>Issued by Cognizant(Forage) - September 2023</p>
+                        <a class="viewcertificate" href="https://drive.google.com/file/d/1pkvzLXyzwWpjPhQ_E-4iYY8fQpM7iHZg/view?usp=drive_link" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <div class="certification-image">
+                        <img src="images/simplilearn.jpg">
+                    </div>
+                    <div class="certification-content">
+                        <h3>Introduction to IoT</h3>
+                        <p>Issued by Simplilearn - June 2022</p>
+                        <a class="viewcertificate" href="https://drive.google.com/file/d/1txWF5T5ezkB4e3uxNZrhyI2Y73mP0acS/view?usp=drive_link" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <div class="certification-image">
+                        <img src="images/tcs.jpeg">
+                    </div>
+                    <div class="certification-content">
+                        <h3>TCS iON Career Edge-Young Professional</h3>
+                        <p>Issued by TCS - November 2021</p>
+                        <a class="viewcertificate" href="https://drive.google.com/file/d/1d9jJGfbATe4dWAlCF6lzUFFAajqCzotf/view?usp=drive_link" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects Section -->
+    <div id="projects" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <h1 class="heading">Projects</h1>
+            <div class="projects-column-container">    
+                <div class="projects-left">
+                    <h1>Stack Overflow Label Prediction Using Machine Learning</h1>
+                    <p>
+                        Built a machine learning model to predict relevant tags for Stack Overflow questions using logistic regression with a OneVsRest classifier. This improved searchability and response time, enhancing the user experience and increasing the accuracy of question classification.
+                    </p>
+                    <h2>Technologies Used</h2>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Scikit-learn</span>
+                        <span>NLTK</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>SQLite</span>
+                        <span>Jupyter Notebook</span>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://github.com/Badarinath15122001/Label-Prediction-Using-Machine-Learning" class="projects-btn" target="_blank">GitHub Repository</a>
+                    </div>
+                </div>
+                <div class="projects-right">
+                    <h2>Problem Statement</h2>
+                    <p>
+                        Automate tag prediction for Stack Overflow questions to improve searchability and response accuracy, making it easier for users to find relevant content.
+                    </p>
+                    <h2>Solution</h2>
+                    <ul>
+                        <li>Developed a multi-label model using OneVsRest Classifier and Logistic Regression.</li>
+                        <li>Preprocessed text using NLTK and Snowball Stemmer to clean and standardize data.</li>
+                        <li>Used TfIdf Vectorizer to convert text into numerical format, enhancing model accuracy.</li>
+                        <li>Evaluated performance using accuracy, precision, recall, and F1-score metrics.</li>
+                    </ul>
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel-slide active">
+                                <img src="images/image_2.png" loading="lazy" alt="Image 2">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/image_3.png" loading="lazy" alt="Image 3">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/image_4.png" loading="lazy" alt="Image 4">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/image_5.png" loading="lazy" alt="Image 5">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/image_6.png" loading="lazy" alt="Image 6">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/image_7.png" loading="lazy" alt="Image 7">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/image_8.png" loading="lazy" alt="Image 8">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/image_9.png" loading="lazy" alt="Image 9">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/image_10.png" loading="lazy" alt="Image 10">
+                            </div>
+                        </div>
+                        <button class="carousel-btn carousel-btn-left">&#10094;</button>
+                        <button class="carousel-btn carousel-btn-right">&#10095;</button>
+                        <div class="carousel-indicators"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let slides = document.querySelectorAll('.carousel-slide');
+        let indicators = document.querySelector('.carousel-indicators');
+        let wrapper = document.querySelector('.carousel-wrapper');
+        let currentSlide = 0;
+        const slideDuration = 10000;
+        let slideInterval;
+        slides.forEach((_, index) => {
+            const indicator = document.createElement('div');
+            indicator.classList.add('indicator');
+            if (index === currentSlide) indicator.classList.add('active');
+            indicator.addEventListener('click', () => {
+                showSlide(index);
+                resetSlideShow();
+            });
+            indicators.appendChild(indicator);
+        });
+        function showSlide(index) {
+            currentSlide = (index + slides.length) % slides.length;
+            wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+            document.querySelectorAll('.indicator').forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === currentSlide);
+            });
+        }
+        function showNextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        function showPreviousSlide() {
+            showSlide(currentSlide - 1);
+        }
+        function startSlideShow() {
+            slideInterval = setInterval(showNextSlide, slideDuration);
+        }
+        function stopSlideShow() {
+            clearInterval(slideInterval);
+        }
+        function resetSlideShow() {
+            stopSlideShow();
+            startSlideShow();
+        }
+        document.querySelector('.carousel-btn-left').addEventListener('click', () => {
+            showPreviousSlide();
+            resetSlideShow();
+        });
+        document.querySelector('.carousel-btn-right').addEventListener('click', () => {
+            showNextSlide();
+            resetSlideShow();
+        });
+        let startX = 0;
+        let endX = 0;
+        document.querySelector('.carousel-container').addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+        document.querySelector('.carousel-container').addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            if (startX - endX > 50) {
+                showNextSlide();
+                resetSlideShow();
+            } else if (endX - startX > 50) {
+                showPreviousSlide();
+                resetSlideShow();
+            }
+        });
+        showSlide(0);
+    </script>
+    <!-- Contact Section -->
+    <div id="contact" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-left">
+                    <h1 class="heading">Contact Me</h1>
+                    <p><i class="fas fa-phone"></i> +91 7095231234</p>
+                    <p><i class="fas fa-envelope"></i> badarinath15122001@gmail.com</p>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/bittu_nannapaneni/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://github.com/Badarinath15122001" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/badarinathsaibalaji/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    <a href="https://drive.google.com/file/d/181-PwyjlAto6MzIQdMXWxhIr9YLTw1Bt/view" class="btn" target="_blank">View Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button class="submitbutton" type="submit">Submit</button>
+                    </form>
+                </div>
+                <span id="msg"></span>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Badarinath Sai Balaji. Designed and Developed by Badarinath.</p>
+        </div>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzLk7zVpiusJ0CZOmNx1pyTQD6AzOYLBxLnRLzeVapYeJhIpHnNR6NmQBraZymPOie3Og/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message Sent Succesfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
